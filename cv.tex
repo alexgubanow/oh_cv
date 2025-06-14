@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{multicol}
+
+% Set up fonts
+\usepackage{fontspec}
+\setmainfont{Helvetica Neue}
+
+% Page style
+\pagestyle{fancy}
+fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Custom colors
+\definecolor{graytext}{gray}{0.5}
+
+% Sections
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+
+% Contact info command
+\newcommand{\contactInfo}{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \href{mailto:alex@0x0h.com}{alex@0x0h.com} & +370 602 21388 \\
+    \href{https://github.com/alexgubanow}{github.com/alexgubanow} & \href{https://linkedin.com/in/alexgubanow}{linkedin.com/in/alexgubanow} \\
+  \end{tabular*}
+}
+
+% Begin document
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+  {\Huge \scshape Oleksandr Hubanov} \\[1pt]
+  Dum sp\'{\i}ro, sp\'{e}ro \\
+\end{center}
+
+\vspace{1em}
+\contactInfo
+
+\vspace{1.5em}
+
+% Sections
+\section*{Experience}
+\input{sections/experience.tex}
+
+\section*{Education}
+\input{sections/education.tex}
+
+\section*{Skills}
+\input{sections/skills.tex}
+
+\section*{Publications}
+\input{sections/publications.tex}
+
+\end{document}
